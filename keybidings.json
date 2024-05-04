@@ -1,0 +1,177 @@
+// これはインターネットの送受信用のjsonじゃないのでコメントを入れておっけー
+// VSCodeで設定ファイル以外として開くとエラーが出るが上記の理由から気にしなくていい
+// Place your key bindings in this file to override the defaults
+// カーソルの移動
+[
+  {
+    "key": "ctrl+n", // downのn;ctrl+dは現在選択中の文字を複数選択するために使用なのでそれを変えたくない、n,uのセットで動かした方がやりやすいのも
+    "command": "cursorDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+u", // upのu
+    "command": "cursorUp",
+    "when": "editorTextFocus"
+  },
+  // カーソル右に移動するのにctrl+rってすると手が大変だから距離的にfの方が〇
+  {
+    "key": "ctrl+i", // in front のi
+    "command": "cursorLeft",
+    "when": "editorTextFocus"
+  },
+  // 上に合わせてる
+  {
+    "key": "ctrl+b", // backのb
+    "command": "cursorRight",
+    "when": "editorTextFocus"
+  },
+  {
+    // カーソルを現在の行の先頭に移動
+    "key": "ctrl+shift+i", // in frontのi
+    "command": "cursorHome",
+    "when": "editorTextFocus"
+  },
+  // カーソルを現在の行の最後に移動
+  {
+    "key": "ctrl+shift+b", // backのb
+    "command": "cursorEnd",
+    "when": "editorTextFocus"
+  },
+  // 最後に編集した場所にカーソルを移動
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateToLastEditLocation"
+  },
+  // カーソルをブロックの囲む場所に移動、複数回コマンド実行で先頭・後方切り替え可能
+  {
+    "key": "ctrl+[",
+    "command": "editor.action.jumpToBracket"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "cursorPageDown",
+    "when": "editorTextFocus"
+  },
+  // 削除
+  // h:hidari；左のh
+  {
+    "key": "alt+h",
+    "command": "deleteLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "deleteAllLeft",
+    "when": "editorTextFocus"
+  },
+  // m:migi；右のm
+  {
+    "key": "alt+m",
+    "command": "deleteRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "deleteWordRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "deleteAllRight",
+    "when": "editorTextFocus"
+  },
+  // fn+kは効かない
+  // {
+  //   "key": "fn+k",
+  //   "command": "deleteAllLeft",
+  //   "when": "editorTextFocus"
+  // },
+  // 選択
+  // {
+  //   "key": "ctrl+;",
+  //   "command": "editor.action.smartSelect.grow",
+  //   "when": "editorTextFocus"
+  // },
+  // {
+  //   "key": "ctrl+shift+;",
+  //   "command": "editor.action.smartSelect.shrink",
+  //   "when": "editorTextFocus"
+  // },
+  {
+    "key": "ctrl+]",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "setSelectionAnchor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "cancelSelection",
+    "when": "editorHasSelection"
+  },
+  // コピー / ペースト
+  {
+    "key": "ctrl+w",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "editorTextFocus"
+  },
+  // 新しいショートカット設定
+  {
+    "key": "ctrl+shift+a",
+    "command": "editor.action.selectAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "cursorWordLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "cursorWordRightSelect",
+    "when": "editorTextFocus"
+  },
+  // タブ設定
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.closeAllEditors"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.action.closeActiveEditor"
+  }
+  // 関数やクラスのブロックを閉じたり開いたり
+  // unfoldの設定が効かなかったのでデフォルトを起用
+  // {
+  //   "key": "ctrl+shift+.",
+  //   "command": "editor.fold",
+  //   "when": "editorTextFocus && foldingEnabled"
+  // },
+  // {
+  //   "key": "ctrl+shift+,",
+  //   "command": "editor.unfold",
+  //   "when": "editorTextFocus && !foldingEnabled"
+  // }
+]
