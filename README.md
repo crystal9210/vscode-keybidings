@@ -5,3 +5,4 @@
 
 ## keybidings.json v1 : refer to the .json file
 
+Note: This file is not sent or received via the Internet, so commenting out is allowed within the vscode configuration file itself.
